@@ -102,7 +102,7 @@ $form.submit(function(submitEvent) {
         //capture the input when the enter key is hit
         submitEvent.preventDefault()
         //enter key is equal to 13
-    if (evt.which == 13) {
+    if (submitEvent.which == 13) {
         console.log("press enter")
         //update the search variable to what is in the text box
         updateSearch($userInput.val())
