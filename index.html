@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="js/script.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giphy Search Engine!</h1>
+    <div class="section">
+        <div class="image-wrapper">
+            <img src="https://media4.giphy.com/media/YkdjQNu9YCSGNpELDt/giphy.gif?cid=c84b4bc8wyiijb37753ujtj9hju9w5dq8oqdip5hp478i7ww&rid=giphy.gif&ct=g" alt="" />
+        </div>
+        <div class="input-wrapper">
+            <form class="user-search">
+                <input type="text" id="text-input" placeholder="Search for Gif!">
+                <input type="submit" id="submit-button" value="Submit">
+            </form>
+            <input type="submit" id="shuffle" value="Shuffle">
+        </div>
+        <div class="rating">
+            <form class="rating">
+                <label>Select Specified Rating:</label>
+                <select>
+                    <option value='g'>G</option>
+                    <option value='pg'>PG</option>
+                    <option value='pg-13'>PG-13</option>
+                </select>
+                <input type="submit" id="copy" value="Copy">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

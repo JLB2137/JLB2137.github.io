@@ -1,0 +1,63 @@
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-wrapper {
+    width: 500px;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.input-wrapper {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    gap: 10%;
+    justify-content: center;
+}
+
+.user-search {
+    display: flex;
+    justify-content: center;
+    margin-right: 10%
+}
+
+
+#submit-button {
+    margin-left: 10%;
+    padding: 0 35% 0 10%;
+    width: 50%;
+}
+
+#shuffle {
+    margin-left: 20%;
+    width: 100%;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+select {
+    margin-left: 10px;
+}
+
+#copy {
+    margin-left: 10px;
+}
+
