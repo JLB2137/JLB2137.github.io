@@ -96,24 +96,23 @@ $select.on("change", function(evt) {
 })
 
 
-//capture the input when the enter key is hit
-$userInput.keypress(function(evt) {
-    //enter key is equal to 13
+
+//submit the form that the submit button is nested in
+$form.submit(function(submitEvent) {
+        //capture the input when the enter key is hit
+        submitEvent.preventDefault()
+        //enter key is equal to 13
     if (evt.which == 13) {
         console.log("press enter")
-        //submit the form that the submit button is nested in
-        $form.submit(function(submitEvent) {
-            submitEvent.preventDefault()
-            //update the search variable to what is in the text box
-            updateSearch($userInput.val())
-            //reset the results counter
-            gif.resultsCounter = 0
-            //rerun the giphyAPI to update the image in the index
-            giphyAPI()
-        }
-        )
+        //update the search variable to what is in the text box
+        updateSearch($userInput.val())
+        //reset the results counter
+        gif.resultsCounter = 0
+        //rerun the giphyAPI to update the image in the index
+        giphyAPI()
     }
 })
+
 
 $copy.on("click", function(evt) {
     evt.preventDefault()
