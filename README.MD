@@ -6,6 +6,7 @@
 - jQuery
 - JavaScript
 - HTML
+- GiphyAPI
 
 ## Screenshots
 
@@ -18,7 +19,7 @@
 
 ## Getting Started
 
-Link here
+[Giphy Search Engine!](https://jlb2137.github.io/)
 
 This app is simple to use and allows you to cycle gifs quickly pulling from Giphy! You are able to perform 4 functions using the online app.
 

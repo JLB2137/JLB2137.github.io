@@ -17,7 +17,7 @@ h1 {
 }
 
 .image-wrapper {
-    width: 500px;
+    width: 700px;
 }
 
 img {
@@ -85,3 +85,11 @@ select {
 ::-webkit-input-placeholder {
     text-align: center;
  }
+
+
+ @media (max-width: 500px) {
+
+.image-wrapper {
+    width: 200px;
+}
+}
