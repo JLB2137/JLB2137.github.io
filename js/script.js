@@ -7,6 +7,8 @@ const $submit = $('#submit-button')
 const $form = $('.user-search')
 const $copy = $('input[value="Copy"]')
 const $select = $('select');
+const $counter = $('#counter')
+const $return = $('#return')
 const URL = 'https://api.giphy.com/v1/gifs/search'
 const API_KEY = '?api_key=hvGei9QgKHO2wGpIseEMtFaRyyd0dPN2'
 let searchInput = 'cheese'
@@ -39,6 +41,7 @@ function giphyAPI() {
         gif.response = response
         console.log('length',gif.response.data.length)
         console.log(gif.response)
+        $counter.text(`${gif.resultsCounter+1}/${gif.response.data.length}`)
         
 
     }, function(error) {
@@ -61,10 +64,12 @@ $shuffle.on("click", function(evt) {
     //update the counter to move to the next gif in the array only if we have more gifs in the stack left
     if (gif.resultsCounter < gif.response.data.length - 1) {
         gif.resultsCounter++
+        $counter.text(`${gif.resultsCounter+1} / ${gif.response.data.length}`)
         console.log('gifCounter',gif.resultsCounter)
     //otherwise reset the counter to the first gif
     } else {
         gif.resultsCounter = 0
+        $counter.text(`${gif.resultsCounter+1}/${gif.response.data.length}`)
         console.log('gifCounter',gif.resultsCounter)
     }
     //set the image source equal to the response
@@ -119,4 +124,25 @@ $copy.on("click", function(evt) {
     console.log(gif.response.data[gif.resultsCounter].images.original.webp)
     let x = gif.response.data[gif.resultsCounter].images.original.webp
     navigator.clipboard.writeText(`${x}`)
+})
+
+$return.on("click", function(evt) {
+    //prevent default behavior
+    evt.preventDefault()
+    //update the counter to move to the next gif in the array only if we have more gifs in the stack left
+    if (gif.resultsCounter > 0) {
+        gif.resultsCounter--
+        $counter.text(`${gif.resultsCounter+1} / ${gif.response.data.length}`)
+        console.log('gifCounter',gif.resultsCounter)
+    //otherwise reset the counter to the first gif
+    } else {
+        gif.resultsCounter = 0
+        $counter.text(`${gif.resultsCounter+1}/${gif.response.data.length}`)
+        console.log('gifCounter',gif.resultsCounter)
+    }
+    //set the image source equal to the response
+    gif.imageSource = gif.response.data[gif.resultsCounter].images.original.url
+    //update the image with the next gif in the array
+    $img.attr('src',`${gif.imageSource}`)
+
 })

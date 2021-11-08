@@ -2,19 +2,19 @@
     font-family: helvetica;
 }
 
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 h1 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .image-wrapper {
     width: 700px;
@@ -28,38 +28,42 @@ img {
 }
 
 .input-wrapper {
-    display: grid;
-    grid-template-columns: 66% 33%;
-    gap: 10%;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    gap: 5%;
+    width: 700px;
 }
 
 .user-search {
     display: flex;
-    justify-content: center;
-    margin-right: 10%;
+    flex-direction: row;
+    width: 500px;
 }
 
 #text-input {
     border-radius: 5px;
+    width: 70%;
 }
 
 
 #submit-button {
-    margin-left: 10%;
-    padding: 0 35% 0 10%;
-    width: 50%;
+    margin-left: 5%;
+    width: 30%;
     border-radius: 5px;
     background-color: rgb(94, 94, 99);
     color: white;
 }
 
 #shuffle {
-    margin-left: 20%;
-    width: 100%;
+    width: 125px;
     border-radius: 5px;
     background-color: rgb(94, 94, 99);
     color: white;
+}
+
+#counter {
+    width: 75px;
 }
 
 .rating {
@@ -82,14 +86,32 @@ select {
     color: white;
 }
 
+#return {
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: rgb(94, 94, 99);
+    color: white;
+}
+
 ::-webkit-input-placeholder {
     text-align: center;
  }
-
 
  @media (max-width: 500px) {
 
 .image-wrapper {
     width: 200px;
 }
+
+img {
+    width: 100%;
+    object-fit: contain;
+    border: 5px black double;
+    border-radius: 5px;
+}
+
+.input-wrapper {
+    width: 300px;
+}
+
 }
